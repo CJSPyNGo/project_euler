@@ -1,4 +1,4 @@
-import 1
+from problems.one import sum_from_range
 import unittest
 
 class TestStringMethods(unittest.TestCase):
