@@ -16,7 +16,6 @@ def sum_from_even_fib(max):
     for number in even_numbers:
         sum = sum + number
 
-    print("The sum is: %d" % sum)
     return sum
 
 class TestProblemTwo(unittest.TestCase):
