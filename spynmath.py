@@ -1,3 +1,5 @@
+from math import sqrt 
+from itertools import count, islice
 
 def get_factors(number):
     factors = [] 
@@ -10,3 +12,14 @@ def get_factors(number):
         possible_factor = possible_factor + 1
     
     return list(set(factors))
+
+def is_prime(number):
+    if number < 2:
+        return False
+    
+    for n in islice(count(2), int(sqrt(number) - 1)):
+        if not number % n:
+            return False
+    
+    return True
+    

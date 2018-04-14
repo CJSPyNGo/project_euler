@@ -1,5 +1,5 @@
 import unittest
-from spynmath import get_factors
+from spynmath import get_factors, is_prime
 
 class TestSpynMath(unittest.TestCase):
 
@@ -27,6 +27,22 @@ class TestSpynMath(unittest.TestCase):
         self.assertTrue(8 in factors)
         self.assertTrue(10 in factors)
         self.assertTrue(20 in factors)
+
+    def test_is_prime_5(self):
+        is_number_prime = is_prime(5)
+        self.assertTrue(is_number_prime)
+
+    def test_is_prime_4(self):
+        is_number_prime = is_prime(4)
+        self.assertFalse(is_number_prime)
+    
+    def test_is_prime_73(self):
+        is_number_prime = is_prime(73)
+        self.assertTrue(is_number_prime)
+
+    def test_is_prime_100(self):
+        is_number_prime = is_prime(100)
+        self.assertFalse(is_number_prime)
 
 def main():
     unittest.main()
