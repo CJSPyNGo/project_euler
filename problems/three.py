@@ -1,39 +1,12 @@
 import unittest
-from math import sqrt 
-from itertools import count, islice
+from spynmath import get_factors, is_prime, get_prime_factors
 
 def get_largest_prime_factor(number):
-    factors = [] 
-    possible_factor = 2
-
-    while possible_factor < number / 2:
-        if number % possible_factor == 0:
-            if is_prime(possible_factor):
-                factors.append(possible_factor)
-            
-            other_factor = number / possible_factor
-            if is_prime(other_factor):
-                factors.append(other_factor)
-            
-            if other_factor - possible_factor <= 1:
-                break 
-
-        possible_factor = possible_factor + 1
+    factors = get_prime_factors(number)
     
     sorted_factors = sorted(factors)
     sorted_factors.reverse()
     return sorted_factors.pop(0)
-
-def is_prime(number):
-    if number < 2:
-        return False
-    
-    for n in islice(count(2), int(sqrt(number) - 1)):
-        if not number % n:
-            return False
-    
-    return True
-
 
 class TestProblemThree(unittest.TestCase):
 

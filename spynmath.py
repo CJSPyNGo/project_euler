@@ -9,6 +9,11 @@ def get_factors(number):
         if number % possible_factor == 0:
             factors.append(possible_factor)
 
+            other_factor = number / possible_factor
+            factors.append(other_factor)
+            if other_factor - possible_factor <= 1:
+                break
+
         possible_factor = possible_factor + 1
     
     return list(set(factors))
