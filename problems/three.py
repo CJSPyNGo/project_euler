@@ -1,15 +1,15 @@
 import unittest
-from spynmath import get_factors, is_prime, get_prime_factors
+from spynmath import SpynMath
 
 def get_largest_prime_factor(number):
-    factors = get_prime_factors(number)
+    math = SpynMath()
+    factors = math.get_prime_factors(number)
     
     sorted_factors = sorted(factors)
     sorted_factors.reverse()
     return sorted_factors.pop(0)
 
 class TestProblemThree(unittest.TestCase):
-
     def test_13195(self):
         s = get_largest_prime_factor(13195)
         self.assertEqual(s, 29)
