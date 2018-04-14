@@ -1,5 +1,5 @@
 import unittest
-from spynmath import SpynMath
+from .spynmath import SpynMath
 
 class TestSpynMath(unittest.TestCase):  
     
