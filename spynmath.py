@@ -13,6 +13,15 @@ def get_factors(number):
     
     return list(set(factors))
 
+def get_prime_factors(number):
+    prime_factors = []
+    factors = get_factors(number)
+    for factor in factors:
+        if is_prime(factor):
+            prime_factors.append(factor)
+    
+    return prime_factors
+
 def is_prime(number):
     if number < 2:
         return False
