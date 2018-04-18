@@ -17,8 +17,12 @@ class ProblemFiveTests(unittest.TestCase):
         result = self.five.solve(1, 15)
         self.assertEqual(result, 360360)
 
-    def test_solve (self):
+    def test_solve(self):
         s = self.five.solve(1, 20)
+        self.assertEqual(s, 232792560)
+
+    def test_solve_v2(self):
+        s = self.five.solve_v2()
         self.assertEqual(s, 232792560)
 
 def main():
