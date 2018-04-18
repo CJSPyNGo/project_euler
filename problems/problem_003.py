@@ -1,5 +1,5 @@
 
-from spynmath import SpynMath
+from project_euler.spynmath import SpynMath
 
 class ProblemThree:
     

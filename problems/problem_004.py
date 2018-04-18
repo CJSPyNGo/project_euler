@@ -1,6 +1,6 @@
 from math import sqrt 
 from itertools import count, islice
-from spynmath import SpynMath
+from project_euler.spynmath import SpynMath
 
 class ProblemFour:
     def get_largest_palindrome_product_from_range(self, min, max):
