@@ -80,6 +80,22 @@ class SpynMathTests(unittest.TestCase):
         self.assertTrue(2 in factors)
         self.assertTrue(5 in factors)
     #endregion
+
+    #region is_palindrome
+
+    def test_is_palindrome_101(self):
+        result = self.math.is_palindrome(101)
+        self.assertTrue(result)
+
+    def test_is_palindrome_10101(self):
+        result = self.math.is_palindrome(10101)
+        self.assertTrue(result)
+    
+    def test_is_palindrome_100(self):
+        result = self.math.is_palindrome(100)
+        self.assertFalse(result)
+
+    #endregion
 def main():
     unittest.main()
 

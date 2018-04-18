@@ -37,4 +37,15 @@ class SpynMath:
                 return False
         
         return True
+
+    def is_palindrome(self, number):
+        number_as_string = str(number)
+        list_of_characters = list(number_as_string)
+        list_of_characters.reverse()
+        reversed_number_as_string = ''.join(list_of_characters)
+
+        if number_as_string == reversed_number_as_string:
+            return True
+        
+        return False
     
