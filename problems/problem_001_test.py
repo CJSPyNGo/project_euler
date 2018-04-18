@@ -1,5 +1,5 @@
 import unittest
-from .one import ProblemOne
+from .problem_001 import ProblemOne
 
 class ProblemOneTests(unittest.TestCase):
 

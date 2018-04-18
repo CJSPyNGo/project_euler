@@ -1,5 +1,5 @@
 import unittest
-from .three import ProblemThree
+from .problem_003 import ProblemThree
 
 class ProblemThreeTests(unittest.TestCase):
     def setUp(self):
