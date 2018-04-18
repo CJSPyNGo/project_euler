@@ -1,7 +1,7 @@
 import unittest
 from .three import ProblemThree
 
-class TestProblemThree(unittest.TestCase):
+class ProblemThreeTests(unittest.TestCase):
     def setUp(self):
         self.three = ProblemThree()
 

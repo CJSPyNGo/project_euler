@@ -1,7 +1,7 @@
 import unittest
 from .spynmath import SpynMath
 
-class TestSpynMath(unittest.TestCase):  
+class SpynMathTests(unittest.TestCase):  
     
     def setUp(self):
         self.math = SpynMath()
